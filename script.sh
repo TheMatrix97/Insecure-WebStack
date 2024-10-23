@@ -50,7 +50,7 @@ echo "Done MySQL!"
 
 ## Nginx ##
 apt install -y nginx
-cat << EOF > /var/www/html/credentials.txt
+cat << EOF > /var/www/html/credentials
 AWS_ACCESS_KEY_ID=root
 AWS_SECRET_ACCESS_KEY=mySuperSecureCredentialsNobodyCouldGuess
 EOF
