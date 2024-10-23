@@ -1,6 +1,8 @@
-# Unsecure Web Server Deployment
+# Insecure Web Server Deployment
 
-This repo contains a script to deploy an unsecure webserver stack:
-- nginx
-- mysql
-- FTP (vsftp)
+This repo contains a script to deploy an insecure webserver stack:
+- nginx (credentials.txt indexed)
+- mysql (Root user is open + default root/root)
+- FTP (vsftp) (https://nvd.nist.gov/vuln/detail/CVE-2011-2523)
+    - POC -> (https://gopikrish1792.medium.com/installing-exploiting-vulnerable-ftp-service-on-ubuntu-17ac76c9561a)
+    - Source -> (https://github.com/nikdubois/vsftpd-2.3.4-infected)

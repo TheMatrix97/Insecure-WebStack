@@ -6,8 +6,8 @@ apt-get install -y git build-essential
 
 ## Install VSFTPD ##
 echo "Install VSFTPD"
-FTP_FOLDER="$PWD/insecure-webstack/vsftpd-2.3.4-infected"
-git clone https://github.com/thematrix97/insecure-webstack
+FTP_FOLDER="$PWD/Insecure-WebStack/vsftpd-2.3.4-infected"
+git clone https://github.com/TheMatrix97/Insecure-WebStack.git
 make -C $FTP_FOLDER
 # Deps #
 mkdir -p /usr/share/empty /var/ftp/ 
