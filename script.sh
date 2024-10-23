@@ -11,7 +11,7 @@ git clone https://github.com/TheMatrix97/Insecure-WebStack.git
 make -C $FTP_FOLDER
 # Deps #
 mkdir -p /usr/share/empty /var/ftp/ 
-useradd -d /var/ftp ftp
+/sbin/useradd -d /var/ftp ftp
 chown root:root /var/ftp
 chmod og-w /var/ftp
 # Install
