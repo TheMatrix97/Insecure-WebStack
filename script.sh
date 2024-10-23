@@ -42,8 +42,7 @@ echo "Done VSFTPD!"
 echo "Install MySQL"
 apt install -y mariadb-server
 mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';RENAME USER 'root'@'localhost' TO 'root'@'%';FLUSH PRIVILEGES;"
-sudo systemctl enable mysql
-sudo systemctl start mysql
+systemctl enable mysql --now
 echo "Done MySQL!"
 
 ## Nginx ##
