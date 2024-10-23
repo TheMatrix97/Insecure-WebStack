@@ -12,5 +12,5 @@ This repo contains a script to deploy an insecure webserver stack:
 ```bash
 cd /home/root
 apt install -y curl
-curl -s https://raw.githubusercontent.com/TheMatrix97/Insecure-WebStack/refs/heads/main/script.sh | bash
+curl -s https://raw.githubusercontent.com/TheMatrix97/Insecure-WebStack/refs/tags/1.0.0/script.sh | bash
 ```

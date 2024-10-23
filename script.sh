@@ -36,6 +36,8 @@ WantedBy=multi-user.target
 EOF
 
 systemctl daemon-reload && systemctl enable vsftpd --now
+rm -rf $PWD/Insecure-WebStack
+
 echo "Done VSFTPD!"
 
 ## MySQL ##
