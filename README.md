@@ -6,3 +6,11 @@ This repo contains a script to deploy an insecure webserver stack:
 - FTP (vsftp) (https://nvd.nist.gov/vuln/detail/CVE-2011-2523)
     - POC -> (https://gopikrish1792.medium.com/installing-exploiting-vulnerable-ftp-service-on-ubuntu-17ac76c9561a)
     - Source -> (https://github.com/nikdubois/vsftpd-2.3.4-infected)
+
+# Run the Script
+
+```bash
+cd /home/root
+apt install -y curl
+curl -s https://raw.githubusercontent.com/TheMatrix97/Insecure-WebStack/refs/heads/main/script.sh | bash
+```

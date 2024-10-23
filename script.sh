@@ -15,10 +15,10 @@ useradd -d /var/ftp ftp
 chown root:root /var/ftp
 chmod og-w /var/ftp
 # Install
-sudo cp $FTP_FOLDER/vsftpd /usr/local/sbin/vsftpd
-sudo cp $FTP_FOLDER/vsftpd.8 /usr/local/man/man8
-sudo cp $FTP_FOLDER/vsftpd.conf.5 /usr/local/man/man5
-sudo cp $FTP_FOLDER/vsftpd.conf /etc
+cp $FTP_FOLDER/vsftpd /usr/local/sbin/vsftpd
+cp $FTP_FOLDER/vsftpd.8 /usr/local/man/man8
+cp $FTP_FOLDER/vsftpd.conf.5 /usr/local/man/man5
+cp $FTP_FOLDER/vsftpd.conf /etc
 # Set password to FTP user
 echo "ftp:supersecret" | /sbin/chpasswd
 cat << EOF > /etc/systemd/system/vsftpd.service
