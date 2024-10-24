@@ -43,9 +43,17 @@ echo "Done VSFTPD!"
 ## MySQL ##
 echo "Install MySQL"
 apt install -y mariadb-server
-mysql -e "SET global max_connect_errors=999999999; SET global max_connections=99999999999; ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';RENAME USER 'root'@'localhost' TO 'root'@'%';FLUSH PRIVILEGES;"
-sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/mariadb.conf.d/50-server.cnf
 systemctl enable mysql --now
+echo "Config MySQL..."
+sleep 5
+mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';RENAME USER 'root'@'localhost' TO 'root'@'%';FLUSH PRIVILEGES;"
+sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/mariadb.conf.d/50-server.cnf
+cat << EOF > /etc/mysql/conf.d/90-max-connections.cnf
+[mysqld]
+max_connections = 999999999
+max_connect_errors = 999999999
+EOF
+systemctl restart mysql
 echo "Done MySQL!"
 
 ## Nginx ##
