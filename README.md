@@ -17,6 +17,15 @@ curl -s https://raw.githubusercontent.com/TheMatrix97/Insecure-WebStack/refs/tag
 
 # Part 2
 
+Let's try some injections:
+
+```text
+User: admin
+Password: '
+
+Throws error 500
+```
+
 ## Basic SQLI
 
 First, let's try to bypass de login for user admin:
@@ -26,7 +35,7 @@ User: admin
 Password: ' OR '1'='1
 ```
 
-How could I get the password? Could I use a blind time-based attack?
+How could I get the password? Probably with a blind time-based attack?
 
 **Time-Based**
 ```text
