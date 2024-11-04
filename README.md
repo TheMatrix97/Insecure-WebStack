@@ -17,6 +17,11 @@ curl -s https://raw.githubusercontent.com/TheMatrix97/Insecure-WebStack/refs/tag
 
 # Part 2
 
+Run the script
+```bash
+curl -s https://raw.githubusercontent.com/TheMatrix97/Insecure-WebStack/refs/tags/2.0.0/script_part2.sh | bash
+```
+
 Let's try some injections:
 
 ```text
