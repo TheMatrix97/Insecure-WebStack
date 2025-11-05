@@ -48,8 +48,9 @@ if (\$_SERVER["REQUEST_METHOD"] == "POST") {
     \$sql = "SELECT * FROM users WHERE username = '\$username' AND password = '\$password'";
     \$result = \$conn->query(\$sql);
 
-    if (\$result->num_rows > 0) {
-        echo "Login successful!";
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_row();
+        echo "Login successful! - User:" . $row[1];
     } else {
         echo "Invalid credentials!";
     }
